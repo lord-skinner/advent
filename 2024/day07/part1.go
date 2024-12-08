@@ -6,12 +6,11 @@ import (
 )
 
 func main() {
-	// Read the file
-	file, err := os.Open("input.txt")
+	input, err := os.Open("input.txt")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
 		return
 	}
-	defer file.Close()
+	defer input.Close()
 
 }

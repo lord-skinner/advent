@@ -43,9 +43,9 @@ func main() {
 		fmt.Println("Error opening file:", err)
 		return
 	}
-	defer file.Close()
+	defer input.Close()
 
-	scanner := bufio.NewScanner(file)
+	scanner := bufio.NewScanner(input)
 	safeCount := 0
 	totalCount := 0
 
