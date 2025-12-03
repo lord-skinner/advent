@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Check if a day number was provided
+if [ -z "$1" ]; then
+  echo "Usage: ./run <day_number>"
+  echo "Example: ./run 1"
+  exit 1
+fi
+
+# Format the day number to always be two digits (e.g., 1 -> 01)
+DAY=$(printf "%02d" $1)
+
+echo "🎄 Running Advent of Code - Day $DAY 🎄"
+
+# Run Maven
+# -q: Quiet mode (suppresses the big Maven banner)
+# -Dexec.mainClass: Points to the specific day's Solution file
+mvn -q compile exec:java -Dexec.mainClass="com.example.aoc.day$DAY.Solution"
