@@ -14,11 +14,9 @@ public class Solution {
 
     /**
      * Solves Part 1 of the puzzle.
-     * <p>
      * An ID is considered invalid if:
      * 1. It has an even number of digits.
      * 2. The first half of the digits is identical to the second half.
-     * <p>
      * The method iterates through all IDs in the given ranges and sums up the
      * invalid ones.
      *
